@@ -1,0 +1,79 @@
+/* ISABELLY FERNANDES
+TRABALHO CONDICIONAIS E OBJETOS
+1- a)O código executa o console.log correspondente a idade da pessoa/objeto.
+b)Será impressa a mensagem que Alice pode dirigir se "ela" for maior de 18, se "ela" for menor de 18 imprime a mensagem que "ela" não pode dirigir.
+2- a) O objetivo é dizer se o animal é carnívoro ou não. 
+b) "Leão é um animal carnívoro".
+3- a) O código diz se o número é menor ou maior ou igual a 5, em paralelo se ele é ímpar ou par.
+b)"O número é maior do que 5." e "O número é par."
+
+exercícios de codificação:
+*/
+//1-
+const idade = prompt("Digite sua idade:");
+if (idade >= 18){
+    console.log("Você é maior de idade.");
+}else {
+    console.log("Você não é maior de idade.");
+}
+
+//2- 
+const turno = prompt("Qual turno do dia você estuda: digite M para Matutino, T para Tarde e N para Noturno.");
+var M = "Matutino";
+var T = "Tarde";
+var N = "Noturno";
+if ( M ){
+    console.log("Bom dia");
+} else if (T){
+    console.log("Boa tarde");
+}else if (N){
+    console.log("Boa noite");
+}else{
+    console.log("digite M para Matutino, T para Tarde e N para Noturno.");
+}
+
+//3-
+const turno1 = prompt("Qual turno do dia você estuda: digite M para Matutino, T para Tarde e N para Noturno.");
+var M = "Matutino";
+var T = "Tarde";
+var N = "Noturno";
+switch( turno1){
+   case 'M':
+        console.log("Bom dia");
+        break;
+    case 'T':
+        console.log("Boa tarde");
+        break;
+    case 'N':
+        console.log("Boa noite");
+        break;
+    default:
+        break;
+}
+
+//4-
+const aluno ={
+    nome : 'Ale' ,
+    idade : 25 ,
+    tipoDeCurso : 'Graduação' ,
+    temBolsa: true ,
+}
+if (aluno.temBolsa && aluno.idade <= 30 && aluno.tipoDeCurso === 'Graduação'){
+    console.log("Você pode se candidatar a uma bolsa de estudos!");
+}else{
+    console.log("Desculpe, você não pode se candidatar para a bolsa");
+}
+
+//5-
+const produto ={
+    nome: 'Manteiga de cacau' ,
+    preco: 81 ,
+    desconto: 20 ,
+    freteGratis: true,
+}
+const precoFinal = produto.preco - produto.desconto;
+
+if (precoFinal){
+    console.log("Preço final: " ,precoFinal, 'com frete grátis ' +produto.freteGratis);
+}else{
+}
